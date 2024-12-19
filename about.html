@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Gym</title>
+    <style>
+
+        /* Header Styles */
+        .header {
+            position: relative;
+            animation: slideInDown 2s ease-out;
+        }
+
+        .left {
+            position: absolute;
+            left: 34px;
+            top: 20px;
+            display: inline-block;
+        }
+
+        .left img {
+            width: 100px;
+            height: 100px;
+            filter: invert(100%);
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        .left div {
+            text-align: center;
+        }
+
+        .mid {
+            width: 40%;
+            margin: 20px 290px;
+        }
+
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 20px;
+        }
+
+        /* Button Styles */
+        .btn {
+            font-family: Georgia, serif;
+            margin: 0px, 0px;
+            padding: 4px 14px;
+            color: aliceblue;
+            background-color: rgb(24, 22, 22);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            color: rgb(130, 130, 130);
+            text-decoration: underline;
+            background-color: rgb(40, 40, 40);
+            transform: scale(1.1);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar li a {
+            color: aliceblue;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0px 12px;
+            position: relative;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            color: rgb(130, 130, 130);
+        }
+
+        .navbar li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 2px;
+            background-color: aliceblue;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .navbar li a:hover::after {
+            width: 100%;
+        }
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        header {
+            background: url('photos/img7.webp') no-repeat center center/cover;
+            color: rgb(249, 249, 249);
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: slideInDown 1.5s ease-out;
+        }
+        header p {
+            font-size: 1.2em;
+            animation: slideInUp 1.5s ease-out;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .about-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .about-section h2 {
+            font-size: 2.5em;
+            color: #ff5722;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .about-section p {
+            font-size: 1.2em;
+            color: #bdbdbd;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .team-member {
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 20px;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+        .team-member h3 {
+            font-size: 1.5em;
+            color: #ff9800;
+            margin: 10px 0 5px;
+        }
+        .team-member p {
+            color: #bdbdbd;
+            font-size: 1em;
+        }
+        footer {
+            background: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Gym</h1>
+    <p>Building strength, transforming lives, and achieving goals together!</p>
+</header>
+<div class="mid">
+    <ul class="navbar">
+      <li><a href="index1.html">Home</a></li>
+      <li><a href="about.html">About US</a></li>
+      <li><a href="calculator.html">Fitness Calculator</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+<div class="container">
+    <div class="about-section">
+        <h2>About Us</h2>
+        <p>At our gym, we believe in fostering a community of fitness enthusiasts dedicated to achieving their goals. With state-of-the-art equipment, expert trainers, and a welcoming environment, we empower you to become the best version of yourself.</p>
+    </div>
+
+    <div class="team">
+        <div class="team-member">
+            <img src="photos/img1.jpg" alt="Trainer 1">
+            <h3>John Doe</h3>
+            <p>Head Trainer & Nutrition Specialist</p>
+        </div>
+        <div class="team-member">
+            <img src="photos/img2.jpg" alt="Trainer 2">
+            <h3>Jane Smith</h3>
+            <p>Yoga & Pilates Instructor</p>
+        </div>
+        <div class="team-member">
+            <img src="photos/img3.jpg" alt="Trainer 3">
+            <h3>Mike Johnson</h3>
+            <p>Strength & Conditioning Coach</p>
+        </div>
+        <div class="team-member">
+            <img src="photos/img4.jpg" alt="Trainer 4">
+            <h3>Emily Davis</h3>
+            <p>Cardio & HIIT Specialist</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Our Gym. All rights reserved.</p>
+</footer>
+
+<script>
+    // Automatically scroll to the bottom of the page after 2 seconds
+    setTimeout(() => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }, 2000);
+</script>
+
+</body>
+</html>
